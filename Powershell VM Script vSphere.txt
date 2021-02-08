@@ -4,16 +4,17 @@ switch ($VMCreatorInput) {
 
 'Yes' {
 
-#Connecting to the server
+#Change VM_NAME
+$vmname="VM_NAME"
+
+#Change SERVER_IP, USERNAME, and PASSWORD
 connect-viserver SERVER_IP -user USERNAME -password PASSWORD
 
-#Template = TemplateName
+#Change TEMPLATE_NAME, SERVER_IP, and DATASTORE_NAME
 $template=get-template TEMPLATE_NAME
-$vmhost=get-vmhost 192.168.40.11
-$datastore=get-datastore Datastore_11
+$vmhost=get-vmhost SERVER_IP
+$datastore=get-datastore DATASTORE_NAME
 
-#VMName = New VMName
-$vmname="VM_NAME"
 
 new-vm -name $vmname -datastore $datastore -vmhost $vmhost -template $template -RunAsync -confirm:$false
 
