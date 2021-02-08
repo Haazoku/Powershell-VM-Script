@@ -1,4 +1,4 @@
-# Powershell-VM-Script
+# Powershell-VM-Script-vmware-vSphere
 Powershell Script for creating a VM using PowerCLI *In vmware vSphere*
 
 To use this you have to install PowerCLI in Powershell
